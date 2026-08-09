@@ -19,7 +19,7 @@ class PaymentNotificationListener : NotificationListenerService() {
             "com.miui.sms","com.coloros.mms","com.vivo.mms","com.realme.mms",
             "com.asus.message","com.nokia.messaging","com.motorola.messaging",
             "com.textra","com.handcent.nextsms","com.moez.QKSMS",
-            "com.klinker.android.evolve_sms","com.dice.truemessenger"
+            "com.klinker.android.evolve_sms","com.dice.truemessenger","com.google.android.apps.messaging"
         )
 
         private val PAYMENT_APPS = setOf(
