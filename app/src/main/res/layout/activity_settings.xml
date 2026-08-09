@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#EEEEF4">
+
+    <!-- App Bar -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="#EEEEF4">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_back"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="16dp">
+
+            <!-- ACCOUNT section label -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ACCOUNT"
+                android:textSize="11sp"
+                android:textColor="@color/text_hint"
+                android:letterSpacing="0.08"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Account card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_settings_card"
+                android:layout_marginBottom="20dp"
+                android:elevation="1dp">
+
+                <!-- Name row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp">
+
+                    <!-- Person icon in salmon/pink circle -->
+                    <FrameLayout
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/bg_person_icon"
+                        android:layout_marginEnd="12dp">
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_person"
+                            android:layout_gravity="center"/>
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Name"
+                        android:textSize="15sp"
+                        android:textColor="@color/text_primary"/>
+
+                    <EditText
+                        android:id="@+id/etUsername"
+                        android:layout_width="120dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/bg_settings_input"
+                        android:textSize="13sp"
+                        android:textColor="@color/text_primary"
+                        android:gravity="center"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:inputType="textPersonName"
+                        android:hint="Your name"
+                        android:textColorHint="#9CA3AF"/>
+                </LinearLayout>
+
+                <!-- Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F0F0F0"
+                    android:layout_marginStart="64dp"/>
+
+                <!-- Night Mode row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp">
+
+                    <!-- Moon icon in purple circle -->
+                    <FrameLayout
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/bg_moon_icon"
+                        android:layout_marginEnd="12dp">
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_moon"
+                            android:layout_gravity="center"/>
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Night Mode"
+                        android:textSize="15sp"
+                        android:textColor="@color/text_primary"/>
+
+                    <Switch
+                        android:id="@+id/switchNightMode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- TRACKING & OVERLAY label -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TRACKING &amp; OVERLAY"
+                android:textSize="11sp"
+                android:textColor="@color/text_hint"
+                android:letterSpacing="0.08"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Tracking card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_settings_card"
+                android:layout_marginBottom="20dp"
+                android:elevation="1dp">
+
+                <!-- Minimum Amount -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Minimum Amount"
+                        android:textSize="15sp"
+                        android:textColor="@color/text_primary"/>
+
+                    <EditText
+                        android:id="@+id/etMinAmount"
+                        android:layout_width="80dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/bg_settings_input"
+                        android:textSize="14sp"
+                        android:textColor="@color/text_primary"
+                        android:gravity="center"
+                        android:text="0"
+                        android:inputType="numberDecimal"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"/>
+                </LinearLayout>
+
+                <!-- Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F0F0F0"/>
+
+                <!-- Maximum Amount -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Maximum Amount"
+                        android:textSize="15sp"
+                        android:textColor="@color/text_primary"/>
+
+                    <EditText
+                        android:id="@+id/etMaxAmount"
+                        android:layout_width="80dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/bg_settings_input"
+                        android:textSize="14sp"
+                        android:textColor="@color/text_primary"
+                        android:gravity="center"
+                        android:hint="Set limit"
+                        android:textColorHint="#9CA3AF"
+                        android:inputType="numberDecimal"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- PRIVACY & SECURITY label -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="POPUP &amp; OVERLAY"
+                android:textSize="11sp"
+                android:textColor="@color/text_hint"
+                android:letterSpacing="0.08"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Popup card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_settings_card"
+                android:layout_marginBottom="20dp"
+                android:elevation="1dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Max Categories in Popup"
+                    android:textSize="15sp"
+                    android:textColor="@color/text_primary"
+                    android:layout_marginBottom="8dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2"
+                        android:textSize="12sp"
+                        android:textColor="@color/text_hint"
+                        android:layout_marginEnd="8dp"/>
+
+                    <SeekBar
+                        android:id="@+id/seekPopupMax"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:min="2"
+                        android:max="10"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10"
+                        android:textSize="12sp"
+                        android:textColor="@color/text_hint"
+                        android:layout_marginStart="8dp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvPopupMaxValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/brand_primary"
+                    android:layout_marginTop="4dp"/>
+
+                <!-- Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F0F0F0"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Popup Alive Time"
+                    android:textSize="15sp"
+                    android:textColor="@color/text_primary"
+                    android:layout_marginBottom="8dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="15s"
+                        android:textSize="12sp"
+                        android:textColor="@color/text_hint"
+                        android:layout_marginEnd="8dp"/>
+
+                    <SeekBar
+                        android:id="@+id/seekAliveTime"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:min="0"
+                        android:max="4"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Never"
+                        android:textSize="12sp"
+                        android:textColor="@color/text_hint"
+                        android:layout_marginStart="8dp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvAliveTimeValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/brand_primary"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
+
+            <!-- Popup Alive Time card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_settings_card"
+                android:layout_marginBottom="20dp"
+                android:elevation="1dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Popup Alive Time"
+                    android:textSize="15sp"
+                    android:textColor="@color/text_primary"
+                    android:layout_marginBottom="8dp"/>
+
+                <SeekBar
+                    android:id="@+id/seekAliveTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:min="0"
+                    android:max="4"/>
+
+                <TextView
+                    android:id="@+id/tvAliveTimeValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/brand_primary"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
+
+            <!-- PRIVACY & SECURITY label -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PRIVACY &amp; SECURITY"
+                android:textSize="11sp"
+                android:textColor="@color/text_hint"
+                android:letterSpacing="0.08"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Privacy card - green tinted -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_privacy_card"
+                android:padding="16dp"
+                android:elevation="1dp">
+
+                <!-- Lock icon + title -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="10dp">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@drawable/ic_lock"
+                        android:layout_marginEnd="6dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="100% Private &amp; Local"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"/>
+                </LinearLayout>
+
+                <!-- Body text -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="We do not own servers, and we never collect your data. Every transaction is parsed and stored entirely offline on your device."
+                    android:textSize="13sp"
+                    android:textColor="@color/text_secondary"
+                    android:lineSpacingExtra="3dp"
+                    android:layout_marginBottom="14dp"/>
+
+                <!-- Shield image area -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:background="#C8E6C9"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:src="@drawable/ic_lock"
+                        android:alpha="0.6"
+                        android:scaleX="2.0"
+                        android:scaleY="2.0"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Nav -->
+    <include layout="@layout/layout_bottom_nav"/>
+
+</LinearLayout>
