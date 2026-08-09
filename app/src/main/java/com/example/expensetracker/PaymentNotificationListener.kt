@@ -45,6 +45,12 @@ class PaymentNotificationListener : NotificationListenerService() {
     override fun onNotificationPosted(sbn: StatusBarNotification?) {
         sbn ?: return
         val pkg = sbn.packageName ?: return
+        val debugExtras = sbn.notification?.extras
+        val debugText = listOf(
+            debugExtras?.getCharSequence("android.title")?.toString() ?: "",
+            debugExtras?.getCharSequence("android.text")?.toString() ?: ""
+        ).filter { it.isNotBlank() }.joinToString(" | ")
+        Log.d(TAG, "[DEBUG LOGS] NOTIF [$pkg]: $debugText")
         if (pkg in IGNORE_PACKAGES) {
             Log.d(TAG, "Notification from $pkg — ignored package")
             return
